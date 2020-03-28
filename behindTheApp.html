@@ -1,0 +1,461 @@
+<html lang="es">
+
+<head>
+    <title>COVID-19-ALERT - Behind The App</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="./assets/css/main.css">
+    <link href="https://fonts.googleapis.com/css?family=DM+Sans:400,500,700&amp;display=swap&amp;subset=latin-ext"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="shortcut icon" type="image/png" href="./favicon.ico">
+
+    <!-- Mail Chimp -->
+    <link href="//cdn-images.mailchimp.com/embedcode/classic-10_7.css" rel="stylesheet" type="text/css">
+    <style type="text/css">
+        #mc_embed_signup {
+            background: #fff;
+            clear: left;
+            font: 14px "DM Sans", sans-serif;
+            overflow-y: auto
+        }
+
+        /* Add your own Mailchimp form style overrides in your site stylesheet or in this style block.
+           We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
+    </style>
+    <style type="text/css">
+        #mc-embedded-subscribe-form input[type=checkbox] {
+            display: inline;
+            width: auto;
+        }
+
+        #mergeRow-gdpr {
+            margin-top: 20px;
+        }
+
+        #mergeRow-gdpr fieldset label {
+            font-weight: normal;
+        }
+
+        #mc-embedded-subscribe-form .mc_fieldset {
+            border: none;
+            min-height: 0;
+            padding-bottom: 0;
+        }
+
+        .av-checkbox {
+            margin-right: 5px;
+        }
+    </style>
+    <!-- End Mail Chimp -->
+
+    <!-- Facebook Pixel Code -->
+    <script src="https://connect.facebook.net/signals/config/1138758973136110?v=2.9.15&amp;r=stable" async=""></script>
+    <script async="" src="https://connect.facebook.net/en_US/fbevents.js"></script>
+    <script>
+        !function (f, b, e, v, n, t, s) {
+            if (f.fbq) return; n = f.fbq = function () {
+                n.callMethod ?
+                n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+            };
+            if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0';
+            n.queue = []; t = b.createElement(e); t.async = !0;
+            t.src = v; s = b.getElementsByTagName(e)[0];
+            s.parentNode.insertBefore(t, s)
+        }(window, document, 'script',
+            'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', '1138758973136110');
+        fbq('track', 'PageView');
+    </script>
+    <noscript>
+        <img height="1" width="1" src="https://www.facebook.com/tr?id=1138758973136110&ev=PageView
+&noscript=1" />
+    </noscript>
+    <!-- End Facebook Pixel Code -->
+
+    <style type="text/css">
+        #mc_embed_signup input.mce_inline_error {
+            border-color: #6B0505;
+        }
+
+        #mc_embed_signup div.mce_inline_error {
+            margin: 0 0 1em 0;
+            padding: 5px 10px;
+            background-color: #6B0505;
+            font-weight: bold;
+            z-index: 1;
+            color: #fff;
+        }
+    </style>
+</head>
+
+<body style="zoom: 1;">
+    <header>
+        <div class="mainWidth">
+            <nav class="navBar">
+                <div class="logo"><a href="./index.html"><img src="./assets/images/logo.svg" alt="Logo"></a></div>
+                <div class="hamburger">
+                    <div class="hamburgerBar"></div>
+                    <div class="hamburgerBar"></div>
+                    <div class="hamburgerBar"></div>
+                </div>
+                <ul class="navList navList--visible">
+                    <li class="navItem"><a href="./index.html">Home</a></li>
+                    <li class="navItem navItem--active"><a href="#">Behind the App</a></li>
+                    <li class="navItem"><a href="./theTeam.html">The Team</a></li>
+                    <li class="navItem"><a href="http://www.covid19-alert.eu/blog.html">Blog</a></li>
+                    <li class="navItem"><a href="./privacy.html">Privacy Policy</a></li>
+                    <li class="navItem"><a class="popup-trigger" data-popup-trigger="two">Contacts</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <section id="subPageHeader" class="subPageHeader-behindTheApp">
+        <img class="ellipseBTA" src="./assets/images/Elipse01.svg" alt="background">
+        <div class="mainWidth">
+            <div class="subPageTitle">
+                Behind the app
+            </div>
+            <div class="subPageTitleDecor"></div>
+        </div>
+    </section>
+    <section id="howItWorks">
+
+        <div class="mainWidth">
+            <div class="howItWorksContainer">
+                <div class="howItWorksImage">
+                    <img src="./assets/images/behindTheApp/peopleBehindApp.png">
+                </div>
+                <div class="howitWorksText">
+                    <h2>How it works</h2>
+                    <p>Covid19 Alert! delays the further spread of Covid 19 by registering bluetooth contacts of mobile
+                        telephones. The app informs users in case they have been at risk of getting infected, when they
+                        have been near an infected person. It provides health authorities insight into the geographical
+                        spread of the virus. </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="gdprProof">
+        <div class="gdprBox">
+            <div class="gdprMainText">
+                Privacy proof
+            </div>
+            <div class="gdprSubText">
+                The Covid-19 Alert! app does not collect or use location data of any kind and doesn’t access the contact
+                list of the user’s phone. This app does use Bluetooth data to reveal other devices in a certain range,
+                but it doesn’t store information about where the contact happened. The only information it stores is the
+                distance to the connected device and the time length of proximity. This because it can later be used for
+                calculating the risk level for the user.
+                <br><br>
+                Secondly, no data is uploaded to the server. All collected data is stored locally on the user’s phone
+                and encrypted. In the event when a person is confirmed to be infected with Covid-19, this data can be
+                uploaded to the server, but only if the user agrees to inform people they have been in contact with.
+                Information about risky meetings will be pushed to those devices that were in contact with the infected
+                person during the last 14 days. This information will only include the proximity and time length of the
+                meeting.
+                <br><br>
+                All Covid19-Alert data older than 14 days is automatically deleted from the device.
+            </div>
+        </div>
+    </section>
+    <section id="riskLevel">
+        <img class="ellipseBTAMedium" src="./assets/images/Elipse01.svg" alt="background">
+        <div class="mainWidth">
+            <div class="sectionTitle">
+                Risk level
+            </div>
+            <div class="sectionText">
+                The Covid19 Alert! app assesses the risk level that users are infected, by tracking points where they
+                meet other users with a confirmed Covid-19 infection. It also provides users who have symptoms with a
+                questionnaire based on WHO standards. The app provides users with crucial information on what to do
+                next. The app shows the number of meetings with infected users.
+
+            </div>
+            <div class="sectionContentWrapper">
+                <div class="sectionContentItem">
+                    <div class="sectionContentItemTop">
+                        <img class="leftImage" src="./assets/images/behindTheApp/LowRisk@2x.png" alt="low risk indicator">
+                    </div>
+                    <div class="sectionContentItemTitle">
+                        Low risk
+                    </div>
+                    <div class="sectionContentItemText">
+                        The number of infected people the user has met is limited.
+                    </div>
+                </div>
+                <div class="sectionContentItem">
+                    <div class="sectionContentItemTop">
+                        <div class="sectionContentItemTop">
+                            <img class="centerImage" src="./assets/images/behindTheApp/MediumRisk@2x.png"
+                                alt="medium risk indicator">
+                        </div>
+                    </div>
+                    <div class="sectionContentItemTitle">
+                        Medium risk
+                    </div>
+                    <div class="sectionContentItemText">
+                        The number of infected people the user has met is average.
+                    </div>
+                </div>
+                <div class="sectionContentItem">
+                    <div class="sectionContentItemTop">
+                        <div class="sectionContentItemTop">
+                            <img class="rightImage" src="./assets/images/behindTheApp/HighRisk@2x.png"
+                                alt="high risk indicator">
+                        </div>
+                    </div>
+                    <div class="sectionContentItemTitle">
+                        High risk
+                    </div>
+                    <div class="sectionContentItemText">
+                        The number of infected people the user has met is high.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="whenInfected">
+        <div class="mainWidth">
+            <div class="sectionTitle">
+                When infected
+            </div>
+            <div class="sectionText">
+                When users are infected and it is confirmed by a medical doctor, they get a code to report their
+                infection in the app. Other users they have met are warned. The person with the infection gets
+                information on what to do next. The users they have met get information about ways to avoid social
+                contact.
+            </div>
+            <div class="infSectionWrapper">
+                <div class="infSectionItem">
+                    <div class="infSectionItemImg"><img src="./assets/images/behindTheApp/coughingMan.png"
+                            alt="coughing man"></div>
+                    <div class="infSectionItemText">
+                        <h3>Step 1.</h3>
+                        <p><span>The user experiences symptoms of Covid-19. </span></p>
+                    </div>
+                </div>
+                <div class="infSectionItem">
+                    <div class="infSectionItemImg"><img src="./assets/images/behindTheApp/illPerson1.png"
+                            alt="sneezing person"></div>
+                    <div class="infSectionItemText">
+                        <h3>Step 2.</h3>
+                        <p><span>A medical doctor confirms the infection and provides the user with a code. </span></p>
+                    </div>
+                </div>
+                <div class="infSectionItem">
+                    <div class="infSectionItemText">
+                        <h3>Step 3.</h3>
+                        <p><span>The user uses the code to register the infection in the Covid19 Alert! app. </span></p>
+                    </div>
+                    <div class="infSectionItemImg"><img src="./assets/images/behindTheApp/maskedMan.png" alt="masked man">
+                    </div>
+                </div>
+                <div class="infSectionItem">
+                    <div class="infSectionItemText">
+                        <h3>Step 4.</h3>
+                        <p><span>The people (s)he has met are warned about the risk of infection. They get information
+                                about how to avoid social contact. The ill user gets information about Covid-19. </span>
+                        </p>
+                    </div>
+                    <div class="infSectionItemImg"><img src="./assets/images/behindTheApp/maskedLady.png"
+                            alt="masked Lady"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="installApp">
+        <div class="mainWidth">
+            <div class="installAppBox">
+                <div class="installAppLeft">
+                    <div class="installAppInfo">
+                        Available soon!
+                    </div>
+                    <div class="installAppText">
+                        Join the movement
+                    </div>
+                </div>
+                <div class="installAppRight">
+                    <a class="getAppLink popup-trigger" data-popup-trigger="one">
+                        <img class="shopButton" src="./assets/images/appStoreIcon.png" alt="app store">
+                    </a>
+                    <a class="getAppLink popup-trigger" data-popup-trigger="one">
+                        <img class="shopButton" src="./assets/images/googlePlayIcon.png" alt="google play">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer id="footer">
+        <div class="mainWidth">
+            <div class="footerBar">
+                <div class="footerBarLeft">
+                    <img class="footerLogo" src="./assets/images/logo.svg" alt="logo">
+                </div>
+                <div class="footerBarRight">
+                    <div class="footerBarRightInfo">
+                        ©2020 by www.covid19-alert.org
+                    </div>
+                    <div class="socialMediaWrapper">
+                        <a href="https://www.facebook.com/Covid19-alert-app-106430717661818/?modal=admin_todo_tour"
+                            target="_blank"><img class="socialMediaIcon" src="./assets/images/facebook.svg"
+                                alt="facebook"></a>
+                        <a href="https://twitter.com/covid19alert1" target="_blank"><img
+                                class="socialMediaIcon socialMediaIcon--twitter" src="./assets/images/twitter.svg"
+                                alt="twitter"></a>
+                        <a href="https://www.youtube.com/channel/UCuG61xFiN3t9Vm_QEl9Uj6A?view_as=subscriber"
+                            target="_blank"><img class="socialMediaIcon socialMediaIcon--youtube"
+                                src="./assets/images/youtube.svg" alt="youtube"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <div class="bottomBackground bottomBackground--behindTheApp">
+
+    </div>
+
+    <!--        Pop-Up modal leave e-mail-->
+    <div class="body-blackout"></div>
+    <div class="popup-modal" data-popup-modal="one">
+        <span class="material-icons popup-modal__close">
+            cancel
+        </span>
+        <!--            <h2 class="modalLabel">-->
+        <!--                Leave your e-mail to get informed-->
+        <!--            </h2>-->
+
+        <!-- Mailchimp Signup Form -->
+
+        <div id="mc_embed_signup">
+            <form
+                action="https://covid19-alert.us19.list-manage.com/subscribe/post?u=875ce157c2b9405313e20ad16&amp;id=d8f50cf494"
+                method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate"
+                target="_blank" novalidate="novalidate">
+                <div id="mc_embed_signup_scroll">
+                    <h2>Subscribe</h2>
+                    <div class="indicates-required"><span class="asterisk">*</span> required</div>
+                    <div class="mc-field-group">
+                        <label for="mce-MMERGE1">First name </label>
+                        <input type="text" value="" name="MMERGE1" class="" id="mce-MMERGE1">
+                    </div>
+                    <div class="mc-field-group">
+                        <label for="mce-MMERGE2">Last name </label>
+                        <input type="text" value="" name="MMERGE2" class="" id="mce-MMERGE2">
+                    </div>
+                    <div class="mc-field-group">
+                        <label for="mce-EMAIL">Email address <span class="asterisk">*</span>
+                        </label>
+                        <input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL"
+                            aria-required="true">
+                    </div>
+                    <div id="mergeRow-gdpr" class="mergeRow gdpr-mergeRow content__gdprBlock mc-field-group">
+                        <div class="content__gdpr">
+                            <label><strong>Marketing Permissions</strong></label>
+                            <p>Please select all the ways you would like to hear from Covid-19 Alert!:</p>
+                            <fieldset class="mc_fieldset gdprRequired mc-field-group" name="interestgroup_field">
+                                <label class="checkbox subfield" for="gdpr_93113"><input type="checkbox" id="gdpr_93113"
+                                        name="gdpr[93113]" value="Y" class="av-checkbox "><span>Email</span>
+                                </label><label class="checkbox subfield" for="gdpr_93117"><input type="checkbox"
+                                        id="gdpr_93117" name="gdpr[93117]" value="Y" class="av-checkbox "><span>Direct
+                                        Mail</span> </label><label class="checkbox subfield" for="gdpr_93121"><input
+                                        type="checkbox" id="gdpr_93121" name="gdpr[93121]" value="Y"
+                                        class="av-checkbox "><span>Customized Online Advertising</span> </label>
+                            </fieldset>
+                            <br>
+                            <p style="font-size: 12px">You can unsubscribe at any time by clicking the link in the
+                                footer of our emails. For information about our privacy practices, please check our <a
+                                    href="./privacy.html" target="_blank">privacy policy</a>.</p>
+                        </div>
+                        <br>
+                        <div class="content__gdprLegal">
+                            <p style="font-size: 12px">We use Mailchimp as our marketing platform. By clicking below to
+                                subscribe, you acknowledge that your information will be transferred to Mailchimp for
+                                processing. </p>
+                            <a style="font-size: 12px" href="https://mailchimp.com/legal/" target="_blank">Learn more
+                                about Mailchimp's privacy practices here.</a>
+                        </div>
+                    </div>
+                    <div id="mce-responses" class="clear">
+                        <div class="response" id="mce-error-response" style="display:none"></div>
+                        <div class="response" id="mce-success-response" style="display:none"></div>
+                    </div>
+                    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+                    <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text"
+                            name="b_875ce157c2b9405313e20ad16_d8f50cf494" tabindex="-1" value=""></div>
+                    <div style="text-align: center; margin-top: 15px;" class="clear"><input type="submit"
+                            value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
+                </div>
+            </form>
+        </div>
+        <script type="text/javascript" src="//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js"></script>
+        <script
+            type="text/javascript">(function ($) { window.fnames = new Array(); window.ftypes = new Array(); fnames[1] = 'MMERGE1'; ftypes[1] = 'text'; fnames[2] = 'MMERGE2'; ftypes[2] = 'text'; fnames[0] = 'EMAIL'; ftypes[0] = 'email'; }(jQuery)); var $mcj = jQuery.noConflict(true);</script>
+
+        <!--End mc_embed_signup-->
+    </div>
+
+    <!--        Pop-Up modal contact-->
+    <div class="body-blackout"></div>
+    <div class="popup-modal" data-popup-modal="two">
+        <span class="material-icons popup-modal__close">
+            cancel
+        </span>
+        <h2 class="modalLabel">
+            Contacts
+        </h2>
+        <div class="modalContent">
+            <div class="modalTile">
+                <img class="modalTileImage" src="./assets/images/people/wouter_van_hecke.jpg" alt="team member">
+                <div class="modalTileInfo">
+                    <div class="modalTileInfoItem--bold">
+                        Wouter van Hecke
+                    </div>
+                    <div class="modalTileInfoItem">
+                        <span class="material-icons contactIcon">
+                            phone
+                        </span>
+                        +32 473 863 185
+                    </div>
+                    <div class="modalTileInfoItem">
+                        <span class="material-icons contactIcon">
+                            alternate_email
+                        </span>
+                        <a href="mailto: wouter@covid19-alert.org">wouter@covid19-alert.org</a>
+                    </div>
+                </div>
+            </div>
+            <div class="modalTile">
+                <img class="modalTileImage" src="./assets/images/people/sander_de_vries.jpg" alt="team member">
+                <div class="modalTileInfo">
+                    <div class="modalTileInfoItem--bold">
+                        Sander de Vries
+                    </div>
+                    <div class="modalTileInfoItem">
+                        <span class="material-icons contactIcon">
+                            phone
+                        </span>
+                        +48 532 840 745
+                    </div>
+                    <div class="modalTileInfoItem">
+                        <span class="material-icons contactIcon">
+                            alternate_email
+                        </span>
+                        <a href="mailto: admin@covid19-alert.org">admin@covid19-alert.org</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Scripts -->
+    <!--        <script src="../js/detects.js"></script>-->
+    <!--        <script src="../js/another-file.js"></script>-->
+    <!--        <script src="../js/_matches.polyfill.js"></script>-->
+    <script src="./assets/js/main.js" type="text/javascript"></script>
+
+
+</body>
+
+</html>

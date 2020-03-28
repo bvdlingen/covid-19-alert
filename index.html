@@ -1,0 +1,496 @@
+<html lang="es">
+
+<head>
+    <title>COVID-19-ALERT</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="./assets/css/main.css">
+    <link href="https://fonts.googleapis.com/css?family=DM+Sans:400,500,700&amp;display=swap&amp;subset=latin-ext"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="shortcut icon" type="image/png" href="./favicon.ico">
+
+    <!-- Mail Chimp -->
+    <link href="//cdn-images.mailchimp.com/embedcode/classic-10_7.css" rel="stylesheet" type="text/css">
+    <style type="text/css">
+        #mc_embed_signup {
+            background: #fff;
+            clear: left;
+            font: 14px "DM Sans", sans-serif;
+            overflow-y: auto
+        }
+
+        /* Add your own Mailchimp form style overrides in your site stylesheet or in this style block.
+               We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
+    </style>
+    <style type="text/css">
+        #mc-embedded-subscribe-form input[type=checkbox] {
+            display: inline;
+            width: auto;
+        }
+
+        #mergeRow-gdpr {
+            margin-top: 20px;
+        }
+
+        #mergeRow-gdpr fieldset label {
+            font-weight: normal;
+        }
+
+        #mc-embedded-subscribe-form .mc_fieldset {
+            border: none;
+            min-height: 0;
+            padding-bottom: 0;
+        }
+
+        .av-checkbox {
+            margin-right: 5px;
+        }
+    </style>
+    <!-- End Mail Chimp -->
+
+    <!-- Facebook Pixel Code -->
+    <script src="https://connect.facebook.net/signals/config/1138758973136110?v=2.9.15&amp;r=stable" async=""></script>
+    <script async="" src="https://connect.facebook.net/en_US/fbevents.js"></script>
+    <script src="https://connect.facebook.net/signals/config/1138758973136110?v=2.9.15&amp;r=stable" async=""></script>
+    <script async="" src="https://connect.facebook.net/en_US/fbevents.js"></script>
+    <script>
+        !function (f, b, e, v, n, t, s) {
+            if (f.fbq) return; n = f.fbq = function () {
+                n.callMethod ?
+                    n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+            };
+            if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0';
+            n.queue = []; t = b.createElement(e); t.async = !0;
+            t.src = v; s = b.getElementsByTagName(e)[0];
+            s.parentNode.insertBefore(t, s)
+        }(window, document, 'script',
+            'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', '1138758973136110');
+        fbq('track', 'PageView');
+    </script>
+    <noscript>
+        <img height="1" width="1" src="https://www.facebook.com/tr?id=1138758973136110&ev=PageView
+    &noscript=1" />
+    </noscript>
+    <!-- End Facebook Pixel Code -->
+
+    <style type="text/css">
+        #mc_embed_signup input.mce_inline_error {
+            border-color: #6B0505;
+        }
+
+        #mc_embed_signup div.mce_inline_error {
+            margin: 0 0 1em 0;
+            padding: 5px 10px;
+            background-color: #6B0505;
+            font-weight: bold;
+            z-index: 1;
+            color: #fff;
+        }
+    </style>
+    <style type="text/css">
+        #mc_embed_signup input.mce_inline_error {
+            border-color: #6B0505;
+        }
+
+        #mc_embed_signup div.mce_inline_error {
+            margin: 0 0 1em 0;
+            padding: 5px 10px;
+            background-color: #6B0505;
+            font-weight: bold;
+            z-index: 1;
+            color: #fff;
+        }
+    </style>
+</head>
+
+<body style="zoom: 1;">
+    <header>
+        <div class="mainWidth">
+            <nav class="navBar">
+                <div class="logo"><a href="./index.html"><img src="./assets/images/logo.svg"
+                            alt="Logo"></a></div>
+                <div class="hamburger">
+                    <div class="hamburgerBar"></div>
+                    <div class="hamburgerBar"></div>
+                    <div class="hamburgerBar"></div>
+                </div>
+                <ul class="navList">
+                    <li class="navItem navItem--active"><a href="./#">Home</a></li>
+                    <li class="navItem"><a href="./behindTheApp.html">Behind the App</a></li>
+                    <li class="navItem"><a href="./theTeam.html">The Team</a></li>
+                    <li class="navItem"><a href="http://www.covid19-alert.eu/blog.html">Blog</a></li>
+                    <li class="navItem"><a href="./privacy.html">Privacy Policy</a></li>
+                    <li class="navItem"><a class="popup-trigger" data-popup-trigger="two">Contacts</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <section id="titleSection">
+        <div class="mainWidth">
+            <div class="titleContainer">
+                <div class="titleLeft">
+                    <h1>The app that can
+                        <span>trace</span>
+                        and
+                        <span>alert</span>
+                        all people at risk from COVID-19.
+                    </h1>
+                    <div class="getAppIcons">
+                        <!-- Add :  data-popup-trigger="one" to a link for a popup to work-->
+                        <a class="getAppLink popup-trigger" data-popup-trigger="one">
+                            <img src="./assets/images/appStoreIcon.png" alt="App Store Icon">
+                        </a>
+                        <a class="getAppLink popup-trigger" data-popup-trigger="one">
+                            <img src="./assets/images/googlePlayIcon.png" alt="Google Play Store Icon">
+                        </a>
+                    </div>
+                </div>
+                <div class="titleRight">
+                    <img class="ellipse" src="./assets/images/Elipse01.svg" alt="background">
+                    <img src="./assets/images/iPhone12.png" alt="phone Image">
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="mozaicSection">
+        <div class="mainWidth">
+            <div class="tilesContainer">
+                <div class="bigTile">
+                    <div class="bigTileContainer">
+                        <h2>What's in it for me <br> as a user?</h2>
+                        <div class="tileSubElement"><img src="./assets/images/icon-phone.svg" alt="icon"><span
+                                class="tileSubText">Trace people with Coronavirus</span></div>
+                        <div class="tileSubElement"><img src="./assets/images/icon-gear.svg" alt="icon"><span
+                                class="tileSubText">Understand your risk of infection</span></div>
+                        <div class="tileSubElement"><img src="./assets/images/icon-pen.svg" alt="icon"><span
+                                class="tileSubText">Tips &amp; tricks to avoid panic</span></div>
+                    </div>
+                </div>
+                <div class="smallTile"><img src="./assets/images/childrenImg.png" alt="Picture of a little girl."></div>
+                <div class="smallTile secondTileImg"><img src="./assets/images/seniors.png"
+                        alt="Picture of a little girl."></div>
+                <div class="bigTile secondBigTile">
+                    <div class="bigTileContainer">
+                        <h2>What is the <br> Covid19 Alert! initiative</h2>
+                        <div class="tileSubElement">
+                            <span class="tileSubText blockText">This app is a non for profit project by collective of
+                                concerned techies and designers. We don’t harvest or share your personal data.
+                                <!--                                The app Covid19 Alert! informs you when you have been near an infected person. It also provides health authority insight into the geographical spread of the virus. -->
+                            </span>
+                        </div>
+                        <!--								<div class="tileSubElement"><img src="test" alt="icon"><span class="tileSubText">Feature description come here</span></div>-->
+                        <!--								<div class="tileSubElement"><img src="test" alt="icon"><span class="tileSubText">Feature description come here</span></div>-->
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="video">
+        <div class="mainWidth">
+            <div class="videoPlayerWrapper">
+                <iframe class="videoPlayer" src="https://www.youtube.com/embed/xSGAh9dMfao" frameborder="0"
+                    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="">
+
+                </iframe>
+                <img src="./assets/images/ellipse@2x.svg" alt="ellipse decor" class="ellipse ellipseRight">
+                <img src="./assets/images/ellipse@2x.svg" alt="ellipse decor" class="ellipse ellipseLeft">
+            </div>
+        </div>
+    </section>
+
+    <section id="howDoesItWork">
+        <div class="mainWidth">
+            <div class="sectionTitle">
+                How does it work?
+            </div>
+            <div class="sectionText">
+                Covid19 Alert! works with bluetooth data to trace whether you had contact with a person who contracted
+                the Coronavirus (and uses the app). Privacy is at the core of our design and the use of the app is
+                completely anonymous, and won't trace you.
+            </div>
+            <div class="sectionContentWrapper">
+                <div class="sectionContentItem">
+                    <div class="sectionContentItemTop">
+                        <img class="leftImage" src="./assets/images/illustration01@2x.png" alt="couple with tablet">
+                    </div>
+                    <div class="sectionContentItemTitle">
+                        Contact with an infected person
+                    </div>
+                    <div class="sectionContentItemText">
+                        You have been in contact with an infected person, but are not aware of it. You may have no or
+                        very mild symptoms of Covid-19.
+                    </div>
+                </div>
+                <div class="sectionContentItem">
+                    <div class="sectionContentItemTop">
+                        <div class="sectionContentItemTop">
+                            <img class="centerImage" src="./assets/images/illustration02@2x.png"
+                                alt="woman with tablet">
+                        </div>
+                    </div>
+                    <div class="sectionContentItemTitle">
+                        Covid19 Alert! warns
+                    </div>
+                    <div class="sectionContentItemText">
+                        The Covid19 Alert! app warns about possible infections by showing if risks are low, medium or
+                        high. Knowing that you might have caught the virus will help you stay home and prevent spreading
+                        it further.
+                    </div>
+                </div>
+                <div class="sectionContentItem">
+                    <div class="sectionContentItemTop">
+                        <div class="sectionContentItemTop">
+                            <img class="rightImage" src="./assets/images/illustration03@2x.png" alt="doctor and gauge">
+                        </div>
+                    </div>
+                    <div class="sectionContentItemTitle">
+                        Adjust your behaviour
+                    </div>
+                    <div class="sectionContentItemText">
+                        If you experience symptoms report them to the app. If a medical doctor confirms your infection,
+                        other users will be notified.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="installApp">
+        <div class="mainWidth">
+            <div class="installAppBox">
+                <div class="installAppLeft">
+                    <div class="installAppInfo">
+                        Available soon!
+                    </div>
+                    <div class="installAppText">
+                        Join the movement
+                    </div>
+                </div>
+                <div class="installAppRight">
+                    <a class="getAppLink popup-trigger" data-popup-trigger="one">
+                        <img class="shopButton" src="./assets/images/appStoreIcon.png" alt="app store">
+                    </a>
+                    <a class="getAppLink popup-trigger" data-popup-trigger="one">
+                        <img class="shopButton" src="./assets/images/googlePlayIcon.png" alt="google play">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer id="footer">
+        <div class="mainWidth">
+            <div class="footerBar">
+                <div class="footerBarLeft">
+                    <img class="footerLogo" src="./assets/images/logo(1).svg" alt="logo">
+                </div>
+                <div class="footerBarRight">
+                    <div class="footerBarRightInfo">
+                        ©2020 by www.covid19-alert.org
+                    </div>
+                    <div class="socialMediaWrapper">
+                        <a href="https://www.facebook.com/Covid19-alert-app-106430717661818/?modal=admin_todo_tour"
+                            target="_blank"><img class="socialMediaIcon" src="./assets/images/facebook.svg"
+                                alt="facebook"></a>
+                        <a href="https://twitter.com/covid19alert1" target="_blank"><img
+                                class="socialMediaIcon socialMediaIcon--twitter" src="./assets/images/twitter.svg"
+                                alt="twitter"></a>
+                        <a href="https://www.youtube.com/channel/UCuG61xFiN3t9Vm_QEl9Uj6A?view_as=subscriber"
+                            target="_blank"><img class="socialMediaIcon socialMediaIcon--youtube"
+                                src="./assets/images/youtube.svg" alt="youtube"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <div class="bottomBackground">
+
+    </div>
+
+    <!--        Pop-Up modal leave e-mail-->
+    <div class="body-blackout"></div>
+    <div class="popup-modal" data-popup-modal="one">
+        <span class="material-icons popup-modal__close">
+            cancel
+        </span>
+        <!--            <h2 class="modalLabel">-->
+        <!--                Leave your e-mail to get informed-->
+        <!--            </h2>-->
+
+        <!-- Mailchimp Signup Form -->
+
+        <div id="mc_embed_signup">
+            <form
+                action="https://covid19-alert.us19.list-manage.com/subscribe/post?u=875ce157c2b9405313e20ad16&amp;id=d8f50cf494"
+                method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate"
+                target="_blank" novalidate="novalidate">
+                <div id="mc_embed_signup_scroll">
+                    <h2>Subscribe</h2>
+                    <div class="indicates-required"><span class="asterisk">*</span> required</div>
+                    <div class="mc-field-group">
+                        <label for="mce-MMERGE1">First name </label>
+                        <input type="text" value="" name="MMERGE1" class="" id="mce-MMERGE1">
+                    </div>
+                    <div class="mc-field-group">
+                        <label for="mce-MMERGE2">Last name </label>
+                        <input type="text" value="" name="MMERGE2" class="" id="mce-MMERGE2">
+                    </div>
+                    <div class="mc-field-group">
+                        <label for="mce-EMAIL">Email address <span class="asterisk">*</span>
+                        </label>
+                        <input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL"
+                            aria-required="true">
+                    </div>
+                    <div id="mergeRow-gdpr" class="mergeRow gdpr-mergeRow content__gdprBlock mc-field-group">
+                        <div class="content__gdpr">
+                            <label><strong>Marketing Permissions</strong></label>
+                            <p>Please select all the ways you would like to hear from Covid-19 Alert!:</p>
+                            <fieldset class="mc_fieldset gdprRequired mc-field-group" name="interestgroup_field">
+                                <label class="checkbox subfield" for="gdpr_93113"><input type="checkbox" id="gdpr_93113"
+                                        name="gdpr[93113]" value="Y" class="av-checkbox "><span>Email</span>
+                                </label><label class="checkbox subfield" for="gdpr_93117"><input type="checkbox"
+                                        id="gdpr_93117" name="gdpr[93117]" value="Y" class="av-checkbox "><span>Direct
+                                        Mail</span> </label><label class="checkbox subfield" for="gdpr_93121"><input
+                                        type="checkbox" id="gdpr_93121" name="gdpr[93121]" value="Y"
+                                        class="av-checkbox "><span>Customized Online Advertising</span> </label>
+                            </fieldset>
+                            <br>
+                            <p style="font-size: 12px">You can unsubscribe at any time by clicking the link in the
+                                footer of our emails. For information about our privacy practices, please check our <a
+                                    href="./privacy.html" target="_blank">privacy policy</a>.
+                            </p>
+                        </div>
+                        <br>
+                        <div class="content__gdprLegal">
+                            <p style="font-size: 12px">We use Mailchimp as our marketing platform. By clicking below to
+                                subscribe, you acknowledge that your information will be transferred to Mailchimp for
+                                processing. </p>
+                            <a style="font-size: 12px" href="https://mailchimp.com/legal/" target="_blank">Learn more
+                                about Mailchimp's privacy practices here.</a>
+                        </div>
+                    </div>
+                    <div id="mce-responses" class="clear">
+                        <div class="response" id="mce-error-response" style="display:none"></div>
+                        <div class="response" id="mce-success-response" style="display:none"></div>
+                    </div>
+                    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+                    <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text"
+                            name="b_875ce157c2b9405313e20ad16_d8f50cf494" tabindex="-1" value=""></div>
+                    <div style="text-align: center; margin-top: 15px;" class="clear"><input type="submit"
+                            value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
+                </div>
+            </form>
+        </div>
+        <script type="text/javascript" src="//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js"></script>
+        <script
+            type="text/javascript">(function ($) { window.fnames = new Array(); window.ftypes = new Array(); fnames[1] = 'MMERGE1'; ftypes[1] = 'text'; fnames[2] = 'MMERGE2'; ftypes[2] = 'text'; fnames[0] = 'EMAIL'; ftypes[0] = 'email'; }(jQuery)); var $mcj = jQuery.noConflict(true);</script>
+
+        <!--End mc_embed_signup-->
+    </div>
+
+    <!--        Pop-Up modal contact-->
+    <div class="body-blackout"></div>
+    <div class="popup-modal" data-popup-modal="two">
+        <span class="material-icons popup-modal__close">
+            cancel
+        </span>
+        <h2 class="modalLabel">
+            Contacts
+        </h2>
+        <div class="modalContent">
+            <div class="modalTile">
+                <img class="modalTileImage" src="./assets/images/people/wouter_van_hecke.jpg" alt="team member">
+                <div class="modalTileInfo">
+                    <div class="modalTileInfoItem--bold">
+                        Wouter van Hecke
+                    </div>
+                    <div class="modalTileInfoItem">
+                        <span class="material-icons contactIcon">
+                            phone
+                        </span>
+                        +32 473 863 185
+                    </div>
+                    <div class="modalTileInfoItem">
+                        <span class="material-icons contactIcon">
+                            alternate_email
+                        </span>
+                        <a href="mailto:%20wouter@covid19-alert.org">wouter@covid19-alert.org</a>
+                    </div>
+                </div>
+            </div>
+            <div class="modalTile">
+                <img class="modalTileImage" src="./assets/images/people/sander_de_vries.jpg" alt="team member">
+                <div class="modalTileInfo">
+                    <div class="modalTileInfoItem--bold">
+                        Sander de Vries
+                    </div>
+                    <div class="modalTileInfoItem">
+                        <span class="material-icons contactIcon">
+                            phone
+                        </span>
+                        +48 532 840 745
+                    </div>
+                    <div class="modalTileInfoItem">
+                        <span class="material-icons contactIcon">
+                            alternate_email
+                        </span>
+                        <a href="mailto:%20admin@covid19-alert.org">admin@covid19-alert.org</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Scripts -->
+    <!--        <script src="../js/detects.js"></script>-->
+    <!--        <script src="../js/another-file.js"></script>-->
+    <!--        <script src="../js/_matches.polyfill.js"></script>-->
+    <script src="./assets/js/main.js" type="text/javascript"></script>
+
+
+    <!-- Code injected by live-server -->
+    <script type="text/javascript">
+        // <![CDATA[  <-- For SVG support
+        if ('WebSocket' in window) {
+            (function () {
+                function refreshCSS() {
+                    var sheets = [].slice.call(document.getElementsByTagName("link"));
+                    var head = document.getElementsByTagName("head")[0];
+                    for (var i = 0; i < sheets.length; ++i) {
+                        var elem = sheets[i];
+                        var parent = elem.parentElement || head;
+                        parent.removeChild(elem);
+                        var rel = elem.rel;
+                        if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+                            var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+                            elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+                        }
+                        parent.appendChild(elem);
+                    }
+                }
+                var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+                var address = protocol + window.location.host + window.location.pathname + '/ws';
+                var socket = new WebSocket(address);
+                socket.onmessage = function (msg) {
+                    if (msg.data == 'reload') window.location.reload();
+                    else if (msg.data == 'refreshcss') refreshCSS();
+                };
+                if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+                    console.log('Live reload enabled.');
+                    sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+                }
+            })();
+        }
+        else {
+            console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+        }
+	// ]]>
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,2571 @@
+/*! covid-19-name v0.0.1 */
+/**
+ * @section Base Styles
+ */
+/* line 7, src/sass/components/_base.scss */
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+/* line 13, src/sass/components/_base.scss */
+html {
+  overflow-x: hidden;
+}
+
+/* line 17, src/sass/components/_base.scss */
+body {
+  width: 100vw;
+  font-size: 14px;
+  font-family: 'DM Sans', sans-serif;
+  color: #271335;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(76, 69, 243, 0)), color-stop(95%, #EFEFFD), to(#DCDBFC));
+  background: linear-gradient(180deg, rgba(76, 69, 243, 0) 0%, #EFEFFD 95%, #DCDBFC 100%);
+  position: relative;
+  overflow-x: hidden;
+}
+
+/* line 27, src/sass/components/_base.scss */
+input,
+textarea,
+select,
+button {
+  font: inherit;
+}
+
+/* line 34, src/sass/components/_base.scss */
+.mainWidth {
+  max-width: 1170px;
+  padding: 0 20px;
+  margin: 0 auto;
+}
+
+@media screen and (max-width: 768px) {
+  /* line 34, src/sass/components/_base.scss */
+  .mainWidth {
+    width: 100vw;
+    overflow-x: hidden;
+  }
+}
+
+/* line 45, src/sass/components/_base.scss */
+.sectionTitle {
+  width: 100%;
+  min-height: 40px;
+  font-weight: bold;
+  font-size: 40px;
+  line-height: 40px;
+  margin-bottom: 26px;
+}
+
+@media screen and (max-width: 500px) {
+  /* line 45, src/sass/components/_base.scss */
+  .sectionTitle {
+    text-align: center;
+  }
+}
+
+/* line 58, src/sass/components/_base.scss */
+.sectionText {
+  width: 75%;
+  font-size: 18px;
+  color: rgba(39, 19, 53, 0.64);
+  line-height: 30px;
+  margin-bottom: 113px;
+}
+
+@media screen and (max-width: 768px) {
+  /* line 58, src/sass/components/_base.scss */
+  .sectionText {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  /* line 58, src/sass/components/_base.scss */
+  .sectionText {
+    text-align: center;
+  }
+}
+
+/* line 74, src/sass/components/_base.scss */
+.bottomBackground {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 820px;
+  background: #FFFFFF;
+  z-index: -1;
+}
+
+/* line 84, src/sass/components/_base.scss */
+.bottomBackground--about {
+  height: 550px !important;
+}
+
+/* line 88, src/sass/components/_base.scss */
+.bottomBackground--behindTheApp {
+  height: 550px !important;
+}
+
+/* line 92, src/sass/components/_base.scss */
+.bottomBackground--privacy {
+  height: 500px !important;
+}
+
+/* line 4, src/sass/components/_header.scss */
+header .navBar {
+  height: 200px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media screen and (max-width: 768px) {
+  /* line 4, src/sass/components/_header.scss */
+  header .navBar {
+    height: 100px;
+  }
+}
+
+/* line 14, src/sass/components/_header.scss */
+header .navBar .hamburger {
+  display: none;
+  width: 50px;
+  height: 50px;
+  border-radius: 8px;
+  border: 1px solid #D4D4E8;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 768px) {
+  /* line 14, src/sass/components/_header.scss */
+  header .navBar .hamburger {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
+/* line 29, src/sass/components/_header.scss */
+header .navBar .hamburger .hamburgerBar {
+  width: 60%;
+  height: 4px;
+  background: #06C2BB;
+  margin: 2px 0;
+}
+
+/* line 41, src/sass/components/_header.scss */
+header .navList {
+  width: 80%;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  list-style: none;
+  margin-left: 20px;
+}
+
+@media screen and (max-width: 768px) {
+  /* line 41, src/sass/components/_header.scss */
+  header .navList {
+    position: absolute;
+    top: 80px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    right: 20px;
+    margin-right: -200px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 160px;
+    z-index: 1;
+    background: rgba(255, 255, 255, 0.95);
+    border: 1px solid #D4D4E8;
+    padding: 10px;
+    border-radius: 16px;
+    -webkit-transition: all 200ms ease-in-out;
+    transition: all 200ms ease-in-out;
+  }
+}
+
+/* line 66, src/sass/components/_header.scss */
+header .navList--visible {
+  margin-right: 0;
+  -webkit-transition: all 200ms ease-in-out;
+  transition: all 200ms ease-in-out;
+}
+
+/* line 71, src/sass/components/_header.scss */
+header .navItem {
+  height: 48px;
+  color: #271335;
+  font-weight: bold;
+}
+
+/* line 77, src/sass/components/_header.scss */
+header .navItem:hover {
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+}
+
+@media screen and (max-width: 768px) {
+  /* line 71, src/sass/components/_header.scss */
+  header .navItem {
+    height: 40px;
+    text-align: center;
+  }
+}
+
+/* line 86, src/sass/components/_header.scss */
+header .navItem a {
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+  padding: 0 22px;
+  text-align: center;
+}
+
+@media screen and (max-width: 950px) {
+  /* line 86, src/sass/components/_header.scss */
+  header .navItem a {
+    padding: 0 15px;
+  }
+}
+
+/* line 103, src/sass/components/_header.scss */
+header .navItem--active {
+  color: #06C2BB;
+}
+
+/* line 107, src/sass/components/_header.scss */
+header .navItem:last-of-type {
+  color: #fff;
+  background-color: #4C45F3;
+  border-radius: 58px;
+  margin-left: 22px;
+}
+
+@media screen and (max-width: 950px) {
+  /* line 107, src/sass/components/_header.scss */
+  header .navItem:last-of-type {
+    margin-left: 15px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  /* line 107, src/sass/components/_header.scss */
+  header .navItem:last-of-type {
+    margin-left: 0;
+    margin-top: 10px;
+    border-radius: 10px;
+  }
+  /* line 122, src/sass/components/_header.scss */
+  header .navItem:last-of-type:hover {
+    -webkit-transform: scale(1.03);
+            transform: scale(1.03);
+  }
+}
+
+/* line 128, src/sass/components/_header.scss */
+header .navItem + .navItem--lastActive {
+  background-color: #06C2BB;
+}
+
+/* line 6, src/sass/components/_titleSection.scss */
+.titleContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media screen and (max-width: 768px) {
+  /* line 6, src/sass/components/_titleSection.scss */
+  .titleContainer {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+/* line 15, src/sass/components/_titleSection.scss */
+.titleContainer .titleLeft {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 50%;
+  height: 80%;
+}
+
+@media screen and (max-width: 768px) {
+  /* line 15, src/sass/components/_titleSection.scss */
+  .titleContainer .titleLeft {
+    width: 100%;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
+/* line 26, src/sass/components/_titleSection.scss */
+.titleContainer .titleLeft h1 {
+  font-size: 64px;
+  font-weight: 700;
+  line-height: 72px;
+  color: #261335;
+}
+
+@media screen and (max-width: 768px) {
+  /* line 26, src/sass/components/_titleSection.scss */
+  .titleContainer .titleLeft h1 {
+    margin-top: 20px;
+    text-align: center;
+    font-size: 36px;
+    line-height: 38px;
+  }
+}
+
+/* line 37, src/sass/components/_titleSection.scss */
+.titleContainer .titleLeft h1 span {
+  color: #06C0B9;
+}
+
+/* line 43, src/sass/components/_titleSection.scss */
+.titleContainer .titleRight {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 40%;
+  height: 100%;
+  position: relative;
+}
+
+/* line 50, src/sass/components/_titleSection.scss */
+.titleContainer .titleRight .ellipse {
+  height: 839px;
+  position: absolute;
+  top: -25px;
+  left: -120px;
+  z-index: -1;
+}
+
+@media screen and (max-width: 768px) {
+  /* line 50, src/sass/components/_titleSection.scss */
+  .titleContainer .titleRight .ellipse {
+    display: none;
+  }
+}
+
+/* line 60, src/sass/components/_titleSection.scss */
+.titleContainer .titleRight img {
+  height: 732px;
+  margin-right: 20px;
+}
+
+@media screen and (max-width: 768px) {
+  /* line 60, src/sass/components/_titleSection.scss */
+  .titleContainer .titleRight img {
+    margin-right: 0;
+    margin-top: 20px;
+  }
+}
+
+/* line 71, src/sass/components/_titleSection.scss */
+.getAppIcons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  margin-top: 40px;
+  cursor: pointer;
+}
+
+/* line 77, src/sass/components/_titleSection.scss */
+.getAppIcons .getAppLink:hover {
+  -webkit-transform: scale(1.03);
+          transform: scale(1.03);
+}
+
+/* line 80, src/sass/components/_titleSection.scss */
+.getAppIcons .getAppLink img {
+  height: 48px;
+}
+
+/* line 84, src/sass/components/_titleSection.scss */
+.getAppIcons .getAppLink:first-of-type {
+  margin-right: 10px;
+}
+
+/* line 3, src/sass/components/_mozaicSection.scss */
+#mozaicSection {
+  margin: 30px 0 138px;
+}
+
+@media screen and (max-width: 768px) {
+  /* line 3, src/sass/components/_mozaicSection.scss */
+  #mozaicSection {
+    margin-top: 0;
+    margin-bottom: 60px;
+  }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1170px) {
+  /* line 3, src/sass/components/_mozaicSection.scss */
+  #mozaicSection {
+    margin-top: 0;
+    margin-bottom: 60px;
+  }
+}
+
+/* line 15, src/sass/components/_mozaicSection.scss */
+.tilesContainer {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(550px, 1fr));
+  grid-template-rows: auto;
+  grid-gap: 30px;
+}
+
+@media screen and (max-width: 768px) {
+  /* line 15, src/sass/components/_mozaicSection.scss */
+  .tilesContainer {
+    grid-template-columns: repeat(auto-fill, minmax(100%, 1fr));
+    grid-gap: 20px;
+  }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1170px) {
+  /* line 15, src/sass/components/_mozaicSection.scss */
+  .tilesContainer {
+    grid-template-columns: repeat(auto-fill, minmax(100%, 1fr));
+    grid-gap: 20px;
+  }
+}
+
+/* line 30, src/sass/components/_mozaicSection.scss */
+.bigTile {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 550px;
+  height: 450px;
+  background: -webkit-gradient(linear, left top, left bottom, from(#FFA335), to(#EE8D19));
+  background: linear-gradient(180deg, #FFA335 0%, #EE8D19 100%);
+  border-radius: 8px;
+}
+
+@media screen and (max-width: 768px) {
+  /* line 30, src/sass/components/_mozaicSection.scss */
+  .bigTile {
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1170px) {
+  /* line 30, src/sass/components/_mozaicSection.scss */
+  .bigTile {
+    width: 60%;
+    margin: 0 20%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  /* line 47, src/sass/components/_mozaicSection.scss */
+  .bigTile .bigTileContainer {
+    width: 80%;
+  }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1170px) {
+  /* line 47, src/sass/components/_mozaicSection.scss */
+  .bigTile .bigTileContainer {
+    width: 80%;
+  }
+}
+
+/* line 54, src/sass/components/_mozaicSection.scss */
+.bigTile .bigTileContainer h2 {
+  font-size: 40px;
+  line-height: 40px;
+  color: #fff;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+@media screen and (max-width: 768px) {
+  /* line 54, src/sass/components/_mozaicSection.scss */
+  .bigTile .bigTileContainer h2 {
+    width: 100%;
+    font-size: 30px;
+    line-height: 30px;
+    text-align: center;
+  }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1170px) {
+  /* line 54, src/sass/components/_mozaicSection.scss */
+  .bigTile .bigTileContainer h2 {
+    width: 100%;
+    font-size: 30px;
+    line-height: 30px;
+    text-align: center;
+  }
+}
+
+/* line 73, src/sass/components/_mozaicSection.scss */
+.bigTile .bigTileContainer .tileSubElement {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 445px;
+  background: rgba(255, 255, 255, 0.16);
+  border-radius: 8px;
+  padding: 10px;
+  margin: 8px 0;
+}
+
+@media screen and (max-width: 768px) {
+  /* line 73, src/sass/components/_mozaicSection.scss */
+  .bigTile .bigTileContainer .tileSubElement {
+    width: 100%;
+    margin: 15px 0;
+  }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1170px) {
+  /* line 73, src/sass/components/_mozaicSection.scss */
+  .bigTile .bigTileContainer .tileSubElement {
+    width: 100%;
+    margin: 15px 0;
+  }
+}
+
+/* line 89, src/sass/components/_mozaicSection.scss */
+.bigTile .bigTileContainer .tileSubElement img {
+  margin: 0 25px 0 20px;
+}
+
+/* line 92, src/sass/components/_mozaicSection.scss */
+.bigTile .bigTileContainer .tileSubElement span {
+  font-size: 16px;
+  color: #fff;
+  line-height: 40px;
+}
+
+@media screen and (max-width: 768px) {
+  /* line 92, src/sass/components/_mozaicSection.scss */
+  .bigTile .bigTileContainer .tileSubElement span {
+    line-height: 22px;
+  }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1170px) {
+  /* line 92, src/sass/components/_mozaicSection.scss */
+  .bigTile .bigTileContainer .tileSubElement span {
+    line-height: 22px;
+  }
+}
+
+/* line 103, src/sass/components/_mozaicSection.scss */
+.bigTile .bigTileContainer .tileSubElement .blockText {
+  padding: 10px;
+}
+
+@media screen and (max-width: 768px) {
+  /* line 103, src/sass/components/_mozaicSection.scss */
+  .bigTile .bigTileContainer .tileSubElement .blockText {
+    font-size: 20px;
+    line-height: 28px;
+  }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1170px) {
+  /* line 103, src/sass/components/_mozaicSection.scss */
+  .bigTile .bigTileContainer .tileSubElement .blockText {
+    font-size: 20px;
+    line-height: 28px;
+  }
+}
+
+/* line 119, src/sass/components/_mozaicSection.scss */
+.secondBigTile {
+  background: -webkit-gradient(linear, left top, left bottom, from(#00B79B), to(#04AFAB));
+  background: linear-gradient(180deg, #00B79B 0%, #04AFAB 100%);
+}
+
+@media screen and (max-width: 500px) {
+  /* line 119, src/sass/components/_mozaicSection.scss */
+  .secondBigTile {
+    text-align: center;
+  }
+}
+
+/* line 126, src/sass/components/_mozaicSection.scss */
+.smallTile {
+  -ms-flex-item-align: end;
+      align-self: end;
+  width: 550px;
+  height: 360px;
+  margin-bottom: 5px;
+}
+
+@media screen and (max-width: 768px) {
+  /* line 126, src/sass/components/_mozaicSection.scss */
+  .smallTile {
+    width: 100%;
+    height: auto;
+    margin-bottom: 0;
+  }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1170px) {
+  /* line 126, src/sass/components/_mozaicSection.scss */
+  .smallTile {
+    width: 60%;
+    height: auto;
+    margin: 0 20%;
+  }
+}
+
+/* line 141, src/sass/components/_mozaicSection.scss */
+.smallTile img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+/* line 147, src/sass/components/_mozaicSection.scss */
+.secondTileImg {
+  -ms-flex-item-align: start;
+      align-self: start;
+}
+
+@media screen and (min-width: 1171px) {
+  /* line 4, src/sass/components/_mobile.scss */
+  .projects {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1170px) {
+  /* line 12, src/sass/components/_mobile.scss */
+  .projects {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  /* line 21, src/sass/components/_mobile.scss */
+  .bigTile {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  /* line 29, src/sass/components/_mobile.scss */
+  main#home h1 {
+    margin-top: 10vh;
+  }
+  /* line 33, src/sass/components/_mobile.scss */
+  .projects {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* line 3, src/sass/components/_video.scss */
+#video {
+  width: 100%;
+}
+
+/* line 6, src/sass/components/_video.scss */
+#video .videoPlayerWrapper {
+  width: 100%;
+  position: relative;
+  padding-bottom: 56.25%;
+  /* 16:9 */
+  height: 0;
+  margin-bottom: 85px;
+}
+
+/* line 13, src/sass/components/_video.scss */
+#video .videoPlayerWrapper .videoPlayer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 16px;
+}
+
+/* line 22, src/sass/components/_video.scss */
+#video .videoPlayerWrapper .ellipse {
+  position: absolute;
+  width: 417px;
+  height: 527px;
+  z-index: -1;
+}
+
+@media screen and (max-width: 768px) {
+  /* line 22, src/sass/components/_video.scss */
+  #video .videoPlayerWrapper .ellipse {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  /* line 22, src/sass/components/_video.scss */
+  #video .videoPlayerWrapper .ellipse {
+    display: none;
+  }
+}
+
+/* line 37, src/sass/components/_video.scss */
+#video .videoPlayerWrapper .ellipseLeft {
+  top: -370px;
+  left: -184px;
+}
+
+/* line 42, src/sass/components/_video.scss */
+#video .videoPlayerWrapper .ellipseRight {
+  bottom: -367px;
+  right: -223px;
+}
+
+/* line 3, src/sass/components/_howDoesItWork.scss */
+#howDoesItWork {
+  width: 100%;
+}
+
+/* line 6, src/sass/components/_howDoesItWork.scss */
+#howDoesItWork .sectionTitle {
+  width: 100%;
+  min-height: 40px;
+  font-weight: bold;
+  font-size: 40px;
+  line-height: 40px;
+  margin-bottom: 26px;
+}
+
+@media screen and (max-width: 500px) {
+  /* line 6, src/sass/components/_howDoesItWork.scss */
+  #howDoesItWork .sectionTitle {
+    text-align: center;
+  }
+}
+
+/* line 19, src/sass/components/_howDoesItWork.scss */
+#howDoesItWork .sectionText {
+  width: 75%;
+  font-size: 18px;
+  color: rgba(39, 19, 53, 0.64);
+  line-height: 30px;
+  margin-bottom: 113px;
+}
+
+@media screen and (max-width: 768px) {
+  /* line 19, src/sass/components/_howDoesItWork.scss */
+  #howDoesItWork .sectionText {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  /* line 19, src/sass/components/_howDoesItWork.scss */
+  #howDoesItWork .sectionText {
+    text-align: center;
+  }
+}
+
+/* line 35, src/sass/components/_howDoesItWork.scss */
+#howDoesItWork .sectionContentWrapper {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+@media screen and (min-width: 769px) and (max-width: 1170px) {
+  /* line 35, src/sass/components/_howDoesItWork.scss */
+  #howDoesItWork .sectionContentWrapper {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  /* line 35, src/sass/components/_howDoesItWork.scss */
+  #howDoesItWork .sectionContentWrapper {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
+/* line 49, src/sass/components/_howDoesItWork.scss */
+#howDoesItWork .sectionContentWrapper .sectionContentItem {
+  width: 32%;
+  min-width: 360px;
+  background: #FFFFFF;
+  -webkit-box-shadow: 0 0 40px #D4D4E8;
+          box-shadow: 0 0 40px #D4D4E8;
+  border-radius: 16px;
+  padding: 0 40px 40px;
+  margin-bottom: 111px;
+}
+
+@media screen and (min-width: 769px) and (max-width: 1170px) {
+  /* line 49, src/sass/components/_howDoesItWork.scss */
+  #howDoesItWork .sectionContentWrapper .sectionContentItem {
+    width: 60%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  /* line 49, src/sass/components/_howDoesItWork.scss */
+  #howDoesItWork .sectionContentWrapper .sectionContentItem {
+    width: 80%;
+    margin-bottom: 100px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  /* line 49, src/sass/components/_howDoesItWork.scss */
+  #howDoesItWork .sectionContentWrapper .sectionContentItem {
+    width: 100%;
+    min-width: 0;
+    text-align: center;
+  }
+}
+
+/* line 73, src/sass/components/_howDoesItWork.scss */
+#howDoesItWork .sectionContentWrapper .sectionContentItem .sectionContentItemTop {
+  position: relative;
+  width: 100%;
+  height: 259px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+/* line 79, src/sass/components/_howDoesItWork.scss */
+#howDoesItWork .sectionContentWrapper .sectionContentItem .sectionContentItemTop .leftImage,
+#howDoesItWork .sectionContentWrapper .sectionContentItem .sectionContentItemTop .centerImage,
+#howDoesItWork .sectionContentWrapper .sectionContentItem .sectionContentItemTop .rightImage {
+  position: absolute;
+  top: -70px;
+  height: auto;
+}
+
+/* line 87, src/sass/components/_howDoesItWork.scss */
+#howDoesItWork .sectionContentWrapper .sectionContentItem .sectionContentItemTop .leftImage {
+  left: calc(50% - 90px);
+  width: 180px;
+}
+
+/* line 92, src/sass/components/_howDoesItWork.scss */
+#howDoesItWork .sectionContentWrapper .sectionContentItem .sectionContentItemTop .centerImage {
+  left: calc(50% - 153px);
+  width: 307px;
+}
+
+/* line 97, src/sass/components/_howDoesItWork.scss */
+#howDoesItWork .sectionContentWrapper .sectionContentItem .sectionContentItemTop .rightImage {
+  left: calc(50% - 115px);
+  width: 230px;
+}
+
+/* line 103, src/sass/components/_howDoesItWork.scss */
+#howDoesItWork .sectionContentWrapper .sectionContentItem .sectionContentItemTitle {
+  width: 100%;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 26px;
+  margin-bottom: 10px;
+}
+
+/* line 112, src/sass/components/_howDoesItWork.scss */
+#howDoesItWork .sectionContentWrapper .sectionContentItem .sectionContentItemText {
+  width: 100%;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+/* line 3, src/sass/components/_installApp.scss */
+#installApp {
+  width: 100%;
+}
+
+/* line 6, src/sass/components/_installApp.scss */
+#installApp .installAppBox {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  padding: 44px 95px 45px 71px;
+  background: #06C2BB;
+  border-radius: 16px;
+}
+
+@media screen and (max-width: 950px) {
+  /* line 6, src/sass/components/_installApp.scss */
+  #installApp .installAppBox {
+    width: 80%;
+    margin: 0 10%;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    padding: 20px 10px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  /* line 6, src/sass/components/_installApp.scss */
+  #installApp .installAppBox {
+    width: 100%;
+    margin: 0;
+  }
+}
+
+/* line 30, src/sass/components/_installApp.scss */
+#installApp .installAppBox .installAppLeft {
+  max-width: 300px;
+  padding: 20px 0;
+}
+
+@media screen and (max-width: 950px) {
+  /* line 30, src/sass/components/_installApp.scss */
+  #installApp .installAppBox .installAppLeft {
+    text-align: center;
+  }
+}
+
+/* line 38, src/sass/components/_installApp.scss */
+#installApp .installAppBox .installAppLeft .installAppInfo {
+  width: 100%;
+  font-weight: bold;
+  font-size: 40px;
+  line-height: 40px;
+  color: #FFFFFF;
+  margin-bottom: 11px;
+}
+
+/* line 47, src/sass/components/_installApp.scss */
+#installApp .installAppBox .installAppLeft .installAppText {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 30px;
+  color: rgba(255, 255, 255, 0.64);
+}
+
+/* line 55, src/sass/components/_installApp.scss */
+#installApp .installAppBox .installAppRight {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media screen and (max-width: 950px) {
+  /* line 55, src/sass/components/_installApp.scss */
+  #installApp .installAppBox .installAppRight {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
+@media screen and (max-width: 630px) {
+  /* line 55, src/sass/components/_installApp.scss */
+  #installApp .installAppBox .installAppRight {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+/* line 68, src/sass/components/_installApp.scss */
+#installApp .installAppBox .installAppRight .shopButton {
+  margin: 10px 0;
+  height: 64px;
+  width: auto;
+  cursor: pointer;
+}
+
+/* line 74, src/sass/components/_installApp.scss */
+#installApp .installAppBox .installAppRight .shopButton:hover {
+  -webkit-transform: scale(1.03);
+          transform: scale(1.03);
+}
+
+/* line 79, src/sass/components/_installApp.scss */
+#installApp .installAppBox .installAppRight .shopButton:last-of-type {
+  margin-left: 11px;
+}
+
+@media screen and (max-width: 630px) {
+  /* line 79, src/sass/components/_installApp.scss */
+  #installApp .installAppBox .installAppRight .shopButton:last-of-type {
+    margin-left: 0;
+  }
+}
+
+/* line 3, src/sass/components/_footer.scss */
+#footer {
+  width: 100%;
+}
+
+/* line 6, src/sass/components/_footer.scss */
+#footer .footerBar {
+  width: 100%;
+  height: 200px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media screen and (max-width: 580px) {
+  /* line 6, src/sass/components/_footer.scss */
+  #footer .footerBar {
+    height: 300px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
+/* line 19, src/sass/components/_footer.scss */
+#footer .footerBar .footerBarLeft {
+  width: 20%;
+  margin-left: 0;
+  padding: 10px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media screen and (max-width: 580px) {
+  /* line 19, src/sass/components/_footer.scss */
+  #footer .footerBar .footerBarLeft {
+    width: 100%;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
+@media screen and (min-width: 1330px) {
+  /* line 19, src/sass/components/_footer.scss */
+  #footer .footerBar .footerBarLeft {
+    margin-left: -80px;
+  }
+}
+
+/* line 36, src/sass/components/_footer.scss */
+#footer .footerBar .footerBarRight {
+  width: 80%;
+  margin-right: 0;
+  padding: 10px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media screen and (min-width: 1330px) {
+  /* line 36, src/sass/components/_footer.scss */
+  #footer .footerBar .footerBarRight {
+    margin-right: -80px;
+  }
+}
+
+@media screen and (max-width: 580px) {
+  /* line 36, src/sass/components/_footer.scss */
+  #footer .footerBar .footerBarRight {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  /* line 36, src/sass/components/_footer.scss */
+  #footer .footerBar .footerBarRight {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+/* line 56, src/sass/components/_footer.scss */
+#footer .footerBar .footerBarRight .footerBarRightInfo {
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 24px;
+  margin-right: 25px;
+}
+
+@media screen and (max-width: 500px) {
+  /* line 56, src/sass/components/_footer.scss */
+  #footer .footerBar .footerBarRight .footerBarRightInfo {
+    margin-right: 0;
+  }
+}
+
+/* line 67, src/sass/components/_footer.scss */
+#footer .footerBar .footerBarRight .socialMediaWrapper {
+  width: 110px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+/* line 73, src/sass/components/_footer.scss */
+#footer .footerBar .footerBarRight .socialMediaWrapper .socialMediaIcon {
+  height: 25px;
+  width: auto;
+  cursor: pointer;
+}
+
+/* line 78, src/sass/components/_footer.scss */
+#footer .footerBar .footerBarRight .socialMediaWrapper .socialMediaIcon:hover {
+  -webkit-transform: scale(1.15);
+          transform: scale(1.15);
+}
+
+/* line 83, src/sass/components/_footer.scss */
+#footer .footerBar .footerBarRight .socialMediaWrapper .socialMediaIcon--twitter {
+  height: 27px;
+  margin-left: 2px;
+}
+
+/* line 88, src/sass/components/_footer.scss */
+#footer .footerBar .footerBarRight .socialMediaWrapper .socialMediaIcon--youtube {
+  height: 32px;
+}
+
+/* line 3, src/sass/components/_subpageHeader.scss */
+#subPageHeader {
+  width: 100%;
+  margin-bottom: 80px;
+}
+
+/* line 7, src/sass/components/_subpageHeader.scss */
+#subPageHeader .subPageTitle {
+  font-weight: bold;
+  font-size: 64px;
+  line-height: 72px;
+  margin-bottom: 33px;
+}
+
+/* line 14, src/sass/components/_subpageHeader.scss */
+#subPageHeader .subPageTitleDecor {
+  width: 51px;
+  height: 3px;
+  background: #06C2BB;
+}
+
+/* line 21, src/sass/components/_subpageHeader.scss */
+.subPageHeader-behindTheApp {
+  position: relative;
+}
+
+/* line 24, src/sass/components/_subpageHeader.scss */
+.subPageHeader-behindTheApp .ellipseBTA {
+  position: absolute;
+  z-index: -1;
+  right: -40px;
+  height: 1300px;
+}
+
+@media screen and (max-width: 768px) {
+  /* line 24, src/sass/components/_subpageHeader.scss */
+  .subPageHeader-behindTheApp .ellipseBTA {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  /* line 21, src/sass/components/_subpageHeader.scss */
+  .subPageHeader-behindTheApp {
+    margin-bottom: 40px !important;
+  }
+}
+
+/* line 3, src/sass/components/_getInvolved.scss */
+#getInvolved, #gdprProof {
+  width: 100%;
+  margin-bottom: 113px;
+}
+
+/* line 7, src/sass/components/_getInvolved.scss */
+#getInvolved .getInvolvedBox, #gdprProof .getInvolvedBox, #gdprProof .gdprBox {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: -webkit-gradient(linear, left top, left bottom, from(#06C2BB), to(#04AFAB));
+  background: linear-gradient(180deg, #06C2BB 0%, #04AFAB 100%);
+  padding: 112px 40px;
+}
+
+/* line 16, src/sass/components/_getInvolved.scss */
+#getInvolved .getInvolvedBox .getInvolvedMainText, #gdprProof .getInvolvedBox .getInvolvedMainText, #gdprProof .gdprBox .getInvolvedMainText, #getInvolved .getInvolvedBox #gdprProof .gdprMainText, #gdprProof .getInvolvedBox .gdprMainText, #gdprProof .gdprBox .gdprMainText {
+  font-weight: bold;
+  font-size: 40px;
+  line-height: 40px;
+  text-align: center;
+  color: #FFFFFF;
+  margin-bottom: 6px;
+}
+
+/* line 25, src/sass/components/_getInvolved.scss */
+#getInvolved .getInvolvedBox .getInvolvedSubText, #gdprProof .getInvolvedBox .getInvolvedSubText, #gdprProof .gdprBox .getInvolvedSubText, #getInvolved .getInvolvedBox #gdprProof .gdprSubText, #gdprProof .getInvolvedBox .gdprSubText, #gdprProof .gdprBox .gdprSubText {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 30px;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.64);
+  margin-bottom: 25px;
+}
+
+/* line 34, src/sass/components/_getInvolved.scss */
+#getInvolved .getInvolvedBox .getInvolvedButton, #gdprProof .getInvolvedBox .getInvolvedButton, #gdprProof .gdprBox .getInvolvedButton {
+  width: 339px;
+  height: 56px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: #FFFFFF;
+  border-radius: 58px;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 24px;
+  cursor: pointer;
+}
+
+/* line 47, src/sass/components/_getInvolved.scss */
+#getInvolved .getInvolvedBox .getInvolvedButton:hover, #gdprProof .getInvolvedBox .getInvolvedButton:hover, #gdprProof .gdprBox .getInvolvedButton:hover {
+  -webkit-transform: scale(1.03);
+          transform: scale(1.03);
+}
+
+@media screen and (max-width: 400px) {
+  /* line 34, src/sass/components/_getInvolved.scss */
+  #getInvolved .getInvolvedBox .getInvolvedButton, #gdprProof .getInvolvedBox .getInvolvedButton, #gdprProof .gdprBox .getInvolvedButton {
+    width: 300px;
+  }
+}
+
+/* line 55, src/sass/components/_getInvolved.scss */
+#getInvolved .getInvolvedBox .getInvolvedButton a, #gdprProof .getInvolvedBox .getInvolvedButton a, #gdprProof .gdprBox .getInvolvedButton a {
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-decoration: none;
+  color: #271335;
+}
+
+/* line 3, src/sass/components/_people.scss */
+#people {
+  width: 100%;
+  margin-bottom: 85px;
+  margin-top: -30px;
+}
+
+/* line 8, src/sass/components/_people.scss */
+#people .sectionText {
+  margin-bottom: 40px;
+}
+
+/* line 12, src/sass/components/_people.scss */
+#people .sectionTilesContainer {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(167px, 1fr));
+  grid-template-rows: auto;
+  grid-gap: 24px;
+  justify-items: center;
+}
+
+/* line 20, src/sass/components/_people.scss */
+#people .sectionTilesContainer .sectionTile {
+  width: 167px;
+  height: 226px;
+  margin-bottom: 45px;
+}
+
+@media screen and (max-width: 397px) {
+  /* line 20, src/sass/components/_people.scss */
+  #people .sectionTilesContainer .sectionTile {
+    width: 85%;
+    height: 80px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-bottom: 0;
+  }
+}
+
+/* line 34, src/sass/components/_people.scss */
+#people .sectionTilesContainer .personImage {
+  width: 167px;
+  height: 167px;
+  -webkit-box-shadow: 0 0 40px #D4D4E8;
+          box-shadow: 0 0 40px #D4D4E8;
+  border-radius: 16px;
+  margin-bottom: 16px;
+}
+
+@media screen and (max-width: 397px) {
+  /* line 34, src/sass/components/_people.scss */
+  #people .sectionTilesContainer .personImage {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 0;
+  }
+}
+
+@media screen and (max-width: 397px) {
+  /* line 48, src/sass/components/_people.scss */
+  #people .sectionTilesContainer .personInfo {
+    padding-left: 20px;
+  }
+}
+
+/* line 54, src/sass/components/_people.scss */
+#people .sectionTilesContainer .personInfo .personName {
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 24px;
+  text-align: center;
+}
+
+@media screen and (max-width: 397px) {
+  /* line 54, src/sass/components/_people.scss */
+  #people .sectionTilesContainer .personInfo .personName {
+    text-align: left;
+  }
+}
+
+/* line 66, src/sass/components/_people.scss */
+#people .sectionTilesContainer .personInfo .personCompany {
+  font-size: 12px;
+  line-height: 14px;
+  text-align: center;
+  margin-top: -2px;
+}
+
+@media screen and (max-width: 397px) {
+  /* line 66, src/sass/components/_people.scss */
+  #people .sectionTilesContainer .personInfo .personCompany {
+    text-align: left;
+  }
+}
+
+/* line 3, src/sass/components/_partners.scss */
+#partners {
+  width: 100%;
+  margin-top: -35px;
+  margin-bottom: 140px;
+}
+
+@media screen and (max-width: 768px) {
+  /* line 3, src/sass/components/_partners.scss */
+  #partners {
+    margin-bottom: 40px;
+  }
+}
+
+/* line 12, src/sass/components/_partners.scss */
+#partners .sectionText {
+  margin-bottom: 40px;
+}
+
+/* line 16, src/sass/components/_partners.scss */
+#partners .sectionTilesContainer {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(262px, 1fr));
+  grid-template-rows: auto;
+  grid-gap: 24px;
+  justify-items: center;
+}
+
+/* line 24, src/sass/components/_partners.scss */
+#partners .sectionTilesContainer .sectionTile {
+  width: 262px;
+  height: 192px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-shadow: 0 0 40px #D4D4E8;
+          box-shadow: 0 0 40px #D4D4E8;
+  border-radius: 16px;
+  margin-bottom: 45px;
+  background: #FFFFFF;
+}
+
+/* line 35, src/sass/components/_partners.scss */
+#partners .sectionTilesContainer .sectionTile:hover {
+  -webkit-transform: scale(1.03);
+          transform: scale(1.03);
+}
+
+/* line 40, src/sass/components/_partners.scss */
+#partners .sectionTilesContainer .partnerImage {
+  max-height: 60%;
+  max-width: 70%;
+}
+
+/* line 1, src/sass/components/_popupModal.scss */
+.body-blackout {
+  position: fixed;
+  z-index: 1010;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.65);
+  display: none;
+}
+
+/* line 11, src/sass/components/_popupModal.scss */
+.body-blackout.is-blacked-out {
+  display: block;
+}
+
+/* line 16, src/sass/components/_popupModal.scss */
+.popup-modal {
+  max-width: 80%;
+  width: 450px;
+  max-height: 90vh;
+  border-radius: 18px;
+  background-color: #fff;
+  position: fixed;
+  left: 50vw;
+  top: 50vh;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  padding: 45px 30px 30px;
+  opacity: 0;
+  text-align: center;
+  pointer-events: none;
+  -webkit-transition: all 300ms ease-in-out;
+  transition: all 300ms ease-in-out;
+  z-index: 1011;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+/* line 36, src/sass/components/_popupModal.scss */
+.popup-modal.is--visible {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* line 41, src/sass/components/_popupModal.scss */
+.popup-modal__close {
+  position: absolute;
+  font-size: 1.2rem;
+  right: 10px;
+  top: 10px;
+  color: #4C45F3;
+  cursor: pointer;
+}
+
+/* line 49, src/sass/components/_popupModal.scss */
+.popup-modal__close:hover {
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+}
+
+/* line 54, src/sass/components/_popupModal.scss */
+.popup-modal .contactForm {
+  width: 100%;
+  margin-top: 20px;
+}
+
+/* line 58, src/sass/components/_popupModal.scss */
+.popup-modal .contactForm .contactFormInput {
+  width: 60%;
+  height: 40px;
+  border-radius: 8px;
+  border: 1px solid #D4D4E8;
+  font-size: 16px;
+  padding: 10px;
+  margin-bottom: 15px;
+}
+
+@media screen and (max-width: 500px) {
+  /* line 58, src/sass/components/_popupModal.scss */
+  .popup-modal .contactForm .contactFormInput {
+    width: 100%;
+  }
+}
+
+/* line 72, src/sass/components/_popupModal.scss */
+.popup-modal .contactForm .contactFormInput--hidden {
+  display: none;
+}
+
+/* line 76, src/sass/components/_popupModal.scss */
+.popup-modal .contactForm .contactFormButton {
+  height: 40px;
+  margin-left: 10px;
+  color: #fff;
+  background-color: #4C45F3;
+  border: 0;
+  border-radius: 20px;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 8px 20px;
+  cursor: pointer;
+}
+
+/* line 88, src/sass/components/_popupModal.scss */
+.popup-modal .contactForm .contactFormButton:hover {
+  -webkit-transform: scale(1.03);
+          transform: scale(1.03);
+}
+
+/* line 94, src/sass/components/_popupModal.scss */
+.popup-modal .modalContent {
+  width: 100%;
+  margin-top: 20px;
+}
+
+/* line 98, src/sass/components/_popupModal.scss */
+.popup-modal .modalContent .modalTile {
+  width: 80%;
+  margin-left: 10%;
+  margin-right: 10%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 16px;
+}
+
+@media screen and (max-width: 540px) {
+  /* line 98, src/sass/components/_popupModal.scss */
+  .popup-modal .modalContent .modalTile {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+
+/* line 113, src/sass/components/_popupModal.scss */
+.popup-modal .modalContent .modalTile .modalTileImage {
+  width: 80px;
+  height: 80px;
+  -webkit-box-shadow: 0 0 40px #D4D4E8;
+          box-shadow: 0 0 40px #D4D4E8;
+  border-radius: 16px;
+}
+
+@media screen and (max-width: 540px) {
+  /* line 113, src/sass/components/_popupModal.scss */
+  .popup-modal .modalContent .modalTile .modalTileImage {
+    margin-bottom: 10px;
+  }
+}
+
+/* line 124, src/sass/components/_popupModal.scss */
+.popup-modal .modalContent .modalTile .modalTileInfo {
+  height: 100%;
+  margin-left: 10px;
+}
+
+@media screen and (max-width: 540px) {
+  /* line 124, src/sass/components/_popupModal.scss */
+  .popup-modal .modalContent .modalTile .modalTileInfo {
+    margin-left: 0;
+  }
+}
+
+/* line 132, src/sass/components/_popupModal.scss */
+.popup-modal .modalContent .modalTile .modalTileInfo .modalTileInfoItem {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+@media screen and (max-width: 540px) {
+  /* line 132, src/sass/components/_popupModal.scss */
+  .popup-modal .modalContent .modalTile .modalTileInfo .modalTileInfoItem {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
+/* line 142, src/sass/components/_popupModal.scss */
+.popup-modal .modalContent .modalTile .modalTileInfo .modalTileInfoItem .contactIcon {
+  color: #00B79B;
+  margin-right: 5px;
+}
+
+/* line 148, src/sass/components/_popupModal.scss */
+.popup-modal .modalContent .modalTile .modalTileInfo .modalTileInfoItem--bold {
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 24px;
+  text-align: left;
+}
+
+@media screen and (max-width: 540px) {
+  /* line 148, src/sass/components/_popupModal.scss */
+  .popup-modal .modalContent .modalTile .modalTileInfo .modalTileInfoItem--bold {
+    text-align: center;
+  }
+}
+
+/* line 3, src/sass/components/_getInvolved.scss */
+#getInvolved, #gdprProof {
+  width: 100%;
+  margin-bottom: 113px;
+}
+
+/* line 7, src/sass/components/_getInvolved.scss */
+#getInvolved .getInvolvedBox, #gdprProof .getInvolvedBox, #gdprProof .gdprBox {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: -webkit-gradient(linear, left top, left bottom, from(#06C2BB), to(#04AFAB));
+  background: linear-gradient(180deg, #06C2BB 0%, #04AFAB 100%);
+  padding: 112px 40px;
+}
+
+/* line 16, src/sass/components/_getInvolved.scss */
+#getInvolved .getInvolvedBox .getInvolvedMainText, #gdprProof .getInvolvedBox .getInvolvedMainText, #gdprProof .gdprBox .getInvolvedMainText, #getInvolved .getInvolvedBox #gdprProof .gdprMainText, #gdprProof .getInvolvedBox .gdprMainText, #gdprProof .gdprBox .gdprMainText {
+  font-weight: bold;
+  font-size: 40px;
+  line-height: 40px;
+  text-align: center;
+  color: #FFFFFF;
+  margin-bottom: 6px;
+}
+
+/* line 25, src/sass/components/_getInvolved.scss */
+#getInvolved .getInvolvedBox .getInvolvedSubText, #gdprProof .getInvolvedBox .getInvolvedSubText, #gdprProof .gdprBox .getInvolvedSubText, #getInvolved .getInvolvedBox #gdprProof .gdprSubText, #gdprProof .getInvolvedBox .gdprSubText, #gdprProof .gdprBox .gdprSubText {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 30px;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.64);
+  margin-bottom: 25px;
+}
+
+/* line 34, src/sass/components/_getInvolved.scss */
+#getInvolved .getInvolvedBox .getInvolvedButton, #gdprProof .getInvolvedBox .getInvolvedButton, #gdprProof .gdprBox .getInvolvedButton {
+  width: 339px;
+  height: 56px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: #FFFFFF;
+  border-radius: 58px;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 24px;
+  cursor: pointer;
+}
+
+/* line 47, src/sass/components/_getInvolved.scss */
+#getInvolved .getInvolvedBox .getInvolvedButton:hover, #gdprProof .getInvolvedBox .getInvolvedButton:hover, #gdprProof .gdprBox .getInvolvedButton:hover {
+  -webkit-transform: scale(1.03);
+          transform: scale(1.03);
+}
+
+@media screen and (max-width: 400px) {
+  /* line 34, src/sass/components/_getInvolved.scss */
+  #getInvolved .getInvolvedBox .getInvolvedButton, #gdprProof .getInvolvedBox .getInvolvedButton, #gdprProof .gdprBox .getInvolvedButton {
+    width: 300px;
+  }
+}
+
+/* line 55, src/sass/components/_getInvolved.scss */
+#getInvolved .getInvolvedBox .getInvolvedButton a, #gdprProof .getInvolvedBox .getInvolvedButton a, #gdprProof .gdprBox .getInvolvedButton a {
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-decoration: none;
+  color: #271335;
+}
+
+/* line 4, src/sass/components/_gdprProof.scss */
+#gdprProof {
+  position: relative;
+  top: -115px;
+  z-index: -1;
+  margin-bottom: 0;
+}
+
+/* line 10, src/sass/components/_gdprProof.scss */
+#gdprProof .gdprBox {
+  background: -webkit-gradient(linear, left top, left bottom, from(#FFA335), to(#EE8D19));
+  background: linear-gradient(180deg, #FFA335 0%, #EE8D19 100%);
+}
+
+/* line 14, src/sass/components/_gdprProof.scss */
+#gdprProof .gdprMainText {
+  margin-top: 30px;
+  margin-bottom: 26px !important;
+}
+
+/* line 3, src/sass/components/_howItWorks.scss */
+#howItWorks {
+  margin-bottom: 30px;
+}
+
+/* line 5, src/sass/components/_howItWorks.scss */
+#howItWorks .howItWorksContainer {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  border-radius: 16px;
+  background: #fff;
+  -webkit-box-shadow: 0 0 25px #D4D4E8;
+          box-shadow: 0 0 25px #D4D4E8;
+}
+
+@media screen and (max-width: 768px) {
+  /* line 5, src/sass/components/_howItWorks.scss */
+  #howItWorks .howItWorksContainer {
+    border-radius: 5px;
+    -webkit-box-shadow: 0 0 2px #D4D4E8;
+            box-shadow: 0 0 2px #D4D4E8;
+  }
+}
+
+/* line 19, src/sass/components/_howItWorks.scss */
+#howItWorks .howItWorksContainer .howItWorksImage {
+  width: 100%;
+}
+
+/* line 21, src/sass/components/_howItWorks.scss */
+#howItWorks .howItWorksContainer .howItWorksImage img {
+  width: 102%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+/* line 28, src/sass/components/_howItWorks.scss */
+#howItWorks .howItWorksContainer .howitWorksText {
+  padding: 70px;
+}
+
+@media screen and (max-width: 500px) {
+  /* line 28, src/sass/components/_howItWorks.scss */
+  #howItWorks .howItWorksContainer .howitWorksText {
+    text-align: center;
+  }
+}
+
+/* line 35, src/sass/components/_howItWorks.scss */
+#howItWorks .howItWorksContainer .howitWorksText h2 {
+  font-size: 40px;
+  font-weight: bold;
+  line-height: 40px;
+  margin-bottom: 25px;
+}
+
+/* line 41, src/sass/components/_howItWorks.scss */
+#howItWorks .howItWorksContainer .howitWorksText p {
+  font-size: 18px;
+  line-height: 30px;
+}
+
+/* line 3, src/sass/components/_riskLevel.scss */
+#riskLevel {
+  width: 100%;
+  position: relative;
+}
+
+/* line 6, src/sass/components/_riskLevel.scss */
+#riskLevel .ellipseBTAMedium {
+  position: absolute;
+  right: -40px;
+  z-index: -1;
+}
+
+/* line 12, src/sass/components/_riskLevel.scss */
+#riskLevel .sectionTitle {
+  width: 100%;
+  min-height: 40px;
+  font-weight: bold;
+  font-size: 40px;
+  line-height: 40px;
+  margin-bottom: 26px;
+}
+
+@media screen and (max-width: 500px) {
+  /* line 12, src/sass/components/_riskLevel.scss */
+  #riskLevel .sectionTitle {
+    text-align: center;
+  }
+}
+
+/* line 25, src/sass/components/_riskLevel.scss */
+#riskLevel .sectionText {
+  width: 75%;
+  font-size: 18px;
+  color: rgba(39, 19, 53, 0.64);
+  line-height: 30px;
+  margin-bottom: 65px;
+}
+
+@media screen and (max-width: 768px) {
+  /* line 25, src/sass/components/_riskLevel.scss */
+  #riskLevel .sectionText {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  /* line 25, src/sass/components/_riskLevel.scss */
+  #riskLevel .sectionText {
+    text-align: center;
+  }
+}
+
+/* line 41, src/sass/components/_riskLevel.scss */
+#riskLevel .sectionContentWrapper {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+@media screen and (min-width: 769px) and (max-width: 1170px) {
+  /* line 41, src/sass/components/_riskLevel.scss */
+  #riskLevel .sectionContentWrapper {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  /* line 41, src/sass/components/_riskLevel.scss */
+  #riskLevel .sectionContentWrapper {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
+/* line 55, src/sass/components/_riskLevel.scss */
+#riskLevel .sectionContentWrapper .sectionContentItem {
+  width: 32%;
+  min-width: 360px;
+  background: #FFFFFF;
+  -webkit-box-shadow: 0 0 40px #D4D4E8;
+          box-shadow: 0 0 40px #D4D4E8;
+  border-radius: 16px;
+  padding: 0 40px 40px;
+  margin-bottom: 111px;
+}
+
+@media screen and (min-width: 769px) and (max-width: 1170px) {
+  /* line 55, src/sass/components/_riskLevel.scss */
+  #riskLevel .sectionContentWrapper .sectionContentItem {
+    width: 60%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  /* line 55, src/sass/components/_riskLevel.scss */
+  #riskLevel .sectionContentWrapper .sectionContentItem {
+    width: 80%;
+    margin-bottom: 40px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  /* line 55, src/sass/components/_riskLevel.scss */
+  #riskLevel .sectionContentWrapper .sectionContentItem {
+    width: 100%;
+    min-width: 0;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  /* line 79, src/sass/components/_riskLevel.scss */
+  #riskLevel .sectionContentWrapper .sectionContentItem:last-of-type {
+    margin-bottom: 60px;
+  }
+}
+
+/* line 85, src/sass/components/_riskLevel.scss */
+#riskLevel .sectionContentWrapper .sectionContentItem .sectionContentItemTop {
+  position: relative;
+  width: 100%;
+  height: 240px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+/* line 91, src/sass/components/_riskLevel.scss */
+#riskLevel .sectionContentWrapper .sectionContentItem .sectionContentItemTop .leftImage,
+#riskLevel .sectionContentWrapper .sectionContentItem .sectionContentItemTop .centerImage,
+#riskLevel .sectionContentWrapper .sectionContentItem .sectionContentItemTop .rightImage {
+  position: absolute;
+  top: 40px;
+  height: auto;
+}
+
+/* line 99, src/sass/components/_riskLevel.scss */
+#riskLevel .sectionContentWrapper .sectionContentItem .sectionContentItemTop .leftImage {
+  left: calc(50% - 110px);
+  width: 220px;
+}
+
+/* line 104, src/sass/components/_riskLevel.scss */
+#riskLevel .sectionContentWrapper .sectionContentItem .sectionContentItemTop .centerImage {
+  left: calc(50% - 110px);
+  width: 220px;
+}
+
+/* line 109, src/sass/components/_riskLevel.scss */
+#riskLevel .sectionContentWrapper .sectionContentItem .sectionContentItemTop .rightImage {
+  left: calc(50% - 110px);
+  width: 220px;
+}
+
+/* line 115, src/sass/components/_riskLevel.scss */
+#riskLevel .sectionContentWrapper .sectionContentItem .sectionContentItemTitle {
+  width: 100%;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 26px;
+  margin-bottom: 10px;
+}
+
+/* line 124, src/sass/components/_riskLevel.scss */
+#riskLevel .sectionContentWrapper .sectionContentItem .sectionContentItemText {
+  width: 100%;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+/* line 4, src/sass/components/_whenInfected.scss */
+#whenInfected .sectionText {
+  margin-bottom: 40px;
+}
+
+/* line 8, src/sass/components/_whenInfected.scss */
+#whenInfected .infSectionWrapper {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin-bottom: 220px;
+}
+
+@media screen and (min-width: 769px) and (max-width: 1170px) {
+  /* line 8, src/sass/components/_whenInfected.scss */
+  #whenInfected .infSectionWrapper {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin-bottom: 60px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  /* line 8, src/sass/components/_whenInfected.scss */
+  #whenInfected .infSectionWrapper {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin-bottom: 40px;
+  }
+}
+
+/* line 23, src/sass/components/_whenInfected.scss */
+#whenInfected .infSectionWrapper .infSectionItem {
+  width: 48%;
+  min-width: 550px;
+  max-height: 260px;
+  background: #fff;
+  margin-top: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-shadow: 0 0 40px #D4D4E8;
+          box-shadow: 0 0 40px #D4D4E8;
+  border-radius: 16px;
+}
+
+@media screen and (min-width: 769px) and (max-width: 1170px) {
+  /* line 23, src/sass/components/_whenInfected.scss */
+  #whenInfected .infSectionWrapper .infSectionItem {
+    width: 70%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  /* line 23, src/sass/components/_whenInfected.scss */
+  #whenInfected .infSectionWrapper .infSectionItem {
+    width: 90%;
+    min-width: 100px;
+    max-height: none;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  /* line 23, src/sass/components/_whenInfected.scss */
+  #whenInfected .infSectionWrapper .infSectionItem {
+    min-width: 100px;
+    max-height: none;
+    width: 100%;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+/* line 51, src/sass/components/_whenInfected.scss */
+#whenInfected .infSectionWrapper .infSectionItem .infSectionItemImg {
+  width: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+@media screen and (max-width: 500px) {
+  /* line 51, src/sass/components/_whenInfected.scss */
+  #whenInfected .infSectionWrapper .infSectionItem .infSectionItemImg {
+    width: 100%;
+  }
+}
+
+/* line 58, src/sass/components/_whenInfected.scss */
+#whenInfected .infSectionWrapper .infSectionItem .infSectionItemImg img {
+  height: 100%;
+}
+
+@media screen and (max-width: 768px) {
+  /* line 58, src/sass/components/_whenInfected.scss */
+  #whenInfected .infSectionWrapper .infSectionItem .infSectionItemImg img {
+    max-height: 200px;
+  }
+}
+
+/* line 65, src/sass/components/_whenInfected.scss */
+#whenInfected .infSectionWrapper .infSectionItem .infSectionItemText {
+  width: 50%;
+  padding: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+@media screen and (max-width: 500px) {
+  /* line 65, src/sass/components/_whenInfected.scss */
+  #whenInfected .infSectionWrapper .infSectionItem .infSectionItemText {
+    width: 100%;
+  }
+}
+
+/* line 74, src/sass/components/_whenInfected.scss */
+#whenInfected .infSectionWrapper .infSectionItem .infSectionItemText h3 {
+  font-size: 20px;
+  line-height: 26px;
+}
+
+/* line 78, src/sass/components/_whenInfected.scss */
+#whenInfected .infSectionWrapper .infSectionItem .infSectionItemText span {
+  font-size: 16px;
+  line-height: 24px;
+}
+
+/* line 3, src/sass/components/_blog.scss */
+#blog {
+  width: 100%;
+  margin-top: -50px;
+}
+
+/* line 7, src/sass/components/_blog.scss */
+#blog .blogArticles {
+  width: 100%;
+  margin-bottom: 155px;
+  padding-top: 30px;
+}
+
+@media screen and (max-width: 768px) {
+  /* line 7, src/sass/components/_blog.scss */
+  #blog .blogArticles {
+    margin-bottom: 100px;
+  }
+}
+
+/* line 16, src/sass/components/_blog.scss */
+#blog .blogArticles .blogArticle {
+  position: relative;
+  width: 100%;
+  border-radius: 16px;
+  background: #fff;
+  -webkit-box-shadow: 0 0 25px #D4D4E8;
+          box-shadow: 0 0 25px #D4D4E8;
+  padding: 78px 71px;
+  margin-bottom: 69px;
+}
+
+@media screen and (max-width: 950px) {
+  /* line 16, src/sass/components/_blog.scss */
+  #blog .blogArticles .blogArticle {
+    width: 80%;
+    margin: 0 10% 69px;
+    padding: 20px 30px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  /* line 16, src/sass/components/_blog.scss */
+  #blog .blogArticles .blogArticle {
+    width: 100%;
+    margin: 0 0 69px;
+  }
+}
+
+/* line 36, src/sass/components/_blog.scss */
+#blog .blogArticles .blogArticle .blogArticleDate {
+  width: 100%;
+  text-align: right;
+  font-size: 14px;
+  color: rgba(39, 19, 53, 0.64);
+  margin-bottom: 20px;
+}
+
+/* line 44, src/sass/components/_blog.scss */
+#blog .blogArticles .blogArticle .blogArticleHeader {
+  font-weight: bold;
+  font-size: 40px;
+  line-height: 40px;
+  margin-bottom: 26px;
+}
+
+@media screen and (max-width: 500px) {
+  /* line 44, src/sass/components/_blog.scss */
+  #blog .blogArticles .blogArticle .blogArticleHeader {
+    text-align: center;
+  }
+}
+
+/* line 55, src/sass/components/_blog.scss */
+#blog .blogArticles .blogArticle .blogArticleText {
+  font-size: 18px;
+  line-height: 30px;
+  color: rgba(39, 19, 53, 0.64);
+}
+
+@media screen and (max-width: 500px) {
+  /* line 55, src/sass/components/_blog.scss */
+  #blog .blogArticles .blogArticle .blogArticleText {
+    text-align: center;
+  }
+}
+
+/* line 64, src/sass/components/_blog.scss */
+#blog .blogArticles .blogArticle .blogArticleText .blogArticleImageWrapper {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+/* line 69, src/sass/components/_blog.scss */
+#blog .blogArticles .blogArticle .blogArticleText .blogArticleImageWrapper .blogArticleImage {
+  width: 150px;
+  height: 150px;
+}
+
+/* line 75, src/sass/components/_blog.scss */
+#blog .blogArticles .blogArticle .blogArticleText .blogArticleList {
+  padding-left: 40px;
+  text-align: left;
+}
+
+/* line 80, src/sass/components/_blog.scss */
+#blog .blogArticles .blogArticle .blogArticleText .clearFloat {
+  clear: both;
+}
+
+/* line 86, src/sass/components/_blog.scss */
+#blog .blogArticles .ellipse {
+  position: absolute;
+  z-index: -1;
+}
+
+/* line 91, src/sass/components/_blog.scss */
+#blog .blogArticles .ellipseLeft {
+  bottom: -367px;
+  left: -184px;
+}
+
+/* line 96, src/sass/components/_blog.scss */
+#blog .blogArticles .ellipseRight {
+  top: -370px;
+  right: -223px;
+}
+
+/* line 3, src/sass/components/_privacy.scss */
+#privacy {
+  width: 100%;
+  margin-top: -50px;
+}
+
+/* line 7, src/sass/components/_privacy.scss */
+#privacy .privacyArticles {
+  width: 100%;
+  margin-bottom: 155px;
+  padding-top: 30px;
+}
+
+@media screen and (max-width: 768px) {
+  /* line 7, src/sass/components/_privacy.scss */
+  #privacy .privacyArticles {
+    margin-bottom: 100px;
+  }
+}
+
+/* line 16, src/sass/components/_privacy.scss */
+#privacy .privacyArticles .privacyArticle {
+  position: relative;
+  width: 100%;
+  border-radius: 16px;
+  background: #fff;
+  -webkit-box-shadow: 0 0 25px #D4D4E8;
+          box-shadow: 0 0 25px #D4D4E8;
+  padding: 78px 71px;
+  margin-bottom: 69px;
+}
+
+@media screen and (max-width: 950px) {
+  /* line 16, src/sass/components/_privacy.scss */
+  #privacy .privacyArticles .privacyArticle {
+    width: 80%;
+    margin: 0 10% 69px;
+    padding: 20px 30px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  /* line 16, src/sass/components/_privacy.scss */
+  #privacy .privacyArticles .privacyArticle {
+    width: 100%;
+    margin: 0 0 69px;
+  }
+}
+
+/* line 36, src/sass/components/_privacy.scss */
+#privacy .privacyArticles .privacyArticle .privacyArticleHeader {
+  font-weight: bold;
+  font-size: 40px;
+  line-height: 40px;
+  margin-bottom: 26px;
+}
+
+@media screen and (max-width: 500px) {
+  /* line 36, src/sass/components/_privacy.scss */
+  #privacy .privacyArticles .privacyArticle .privacyArticleHeader {
+    text-align: center;
+  }
+}
+
+/* line 47, src/sass/components/_privacy.scss */
+#privacy .privacyArticles .privacyArticle .privacyArticleText {
+  font-size: 16px;
+  line-height: 24px;
+  text-align: justify;
+  color: rgba(39, 19, 53, 0.64);
+}
+
+/* line 53, src/sass/components/_privacy.scss */
+#privacy .privacyArticles .privacyArticle .privacyArticleText .privacyArticleImageWrapper {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+/* line 58, src/sass/components/_privacy.scss */
+#privacy .privacyArticles .privacyArticle .privacyArticleText .privacyArticleImageWrapper .privacyArticleImage {
+  width: 150px;
+  height: 150px;
+}
+
+/* line 64, src/sass/components/_privacy.scss */
+#privacy .privacyArticles .privacyArticle .privacyArticleText .privacyArticleList {
+  padding-left: 13px;
+  text-align: justify;
+}
+
+/* line 68, src/sass/components/_privacy.scss */
+#privacy .privacyArticles .privacyArticle .privacyArticleText .privacyArticleList li {
+  margin-bottom: 24px;
+  font-weight: bold;
+}
+
+/* line 72, src/sass/components/_privacy.scss */
+#privacy .privacyArticles .privacyArticle .privacyArticleText .privacyArticleList li p {
+  font-weight: normal;
+}
+
+/* line 78, src/sass/components/_privacy.scss */
+#privacy .privacyArticles .privacyArticle .privacyArticleText .clearFloat {
+  clear: both;
+}
+
+/* line 84, src/sass/components/_privacy.scss */
+#privacy .privacyArticles .ellipse {
+  position: absolute;
+  z-index: -1;
+}
+
+/* line 89, src/sass/components/_privacy.scss */
+#privacy .privacyArticles .ellipseLeft {
+  bottom: 367px;
+  left: -184px;
+}
+
+/* line 94, src/sass/components/_privacy.scss */
+#privacy .privacyArticles .ellipseRight {
+  top: 370px;
+  right: -223px;
+}
